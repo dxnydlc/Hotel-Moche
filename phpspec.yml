@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: hotelMoche
+        psr4_prefix: hotelMoche
+        src_path: app

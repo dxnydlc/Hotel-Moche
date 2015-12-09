@@ -1,0 +1,30 @@
+-- crear nombre de espacio de trabajo (Name space)
+php artisan app:name hotel1
+
+cambiar time zone
+cambiar lenguaje
+
+en comper.json
+"laravelcollective/html": "5.1.*"
+
+-- para crear los modelos
+php artisan make:model Modelo -m
+
+-- Crear controladores
+php artisan make:controller EmpresaController
+
+D:\xampp\htdocs\hotel1>php artisan make:migration create_prfile_table --create=profile
+
+-- migrar
+php artisan migrate
+
+-- crear modelo
+php artisan make:controller controlador
+
+-- crear migracion para agregar campo deletet_at
+php artisan make:migration [nombre] --table [tabla]
+(luego correr la migracion)
+
+-- crear un validador
+php artisan make:request StoreBlogPostRequest
+
