@@ -13,11 +13,13 @@ var _servicio = 'http://localhost:8000/';
 			});
 			/* ----------------------------------------------------------- */
 			$(document).delegate('.deasuccess','click',function(event){
+				//Preparar la habitacion
 				alert('Hola');
 				event.preventDefault();
 			});
 			/* ----------------------------------------------------------- */
 			$(document).delegate('.deawarning','click',function(event){
+				//Liberar la habitacion para cuando los huesped salgan.
 				alert('Hola');
 				event.preventDefault();
 			});
