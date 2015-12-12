@@ -16,6 +16,14 @@
 		{!!Form::text('apellidos',null,['class'=>'form-control'])!!}
 		<p class="help-block">Apellidos del cliente</p>
 	</div>
-
-	
 </div>
+<!-- /row -->
+
+<div class="row">
+	<div class="form-group col-lg-4">
+		{!!Form::label('precio','Precio:')!!}
+		{!!Form::text('apellidos',null,['class'=>'form-control'])!!}
+		<p class="help-block">Precio de habitación por día.</p>
+	</div>
+</div>
+<!-- /row -->
