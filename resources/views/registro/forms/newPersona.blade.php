@@ -20,9 +20,14 @@
 <!-- /row -->
 
 <div class="row">
-	<div class="form-group col-lg-4">
+	<div class="form-group col-lg-2">
 		{!!Form::label('precio','Precio:')!!}
 		{!!Form::text('apellidos',null,['class'=>'form-control'])!!}
+		<p class="help-block">Día/noche.</p>
+	</div>
+	<div class="form-group col-lg-5">
+		{!!Form::label('precio','Observaciones:')!!}
+		{!!Form::textarea('apellidos',null,['class'=>'form-control','size'=>'1x1'])!!}
 		<p class="help-block">Precio de habitación por día.</p>
 	</div>
 </div>

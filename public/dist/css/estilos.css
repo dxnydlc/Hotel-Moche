@@ -1,6 +1,6 @@
 
-p,td,h1,h2,h3,h4,th, input,a,li,div{
-	font-family: 'Ropa Sans', sans-serif;
+p,td,h1,h2,h3,h4,th, input,a,li,div, label{
+	font-family: 'Ropa Sans', sans-serif !important;
 }
 
 .ttb_Bold{

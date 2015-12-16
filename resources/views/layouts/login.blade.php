@@ -19,9 +19,12 @@
 
     <!-- Custom CSS -->
     {!!Html::style('dist/css/sb-admin-2.css')!!}
+    {!!Html::style('dist/css/estilos.css')!!}
 
     <!-- Custom Fonts -->
     {!!Html::style('bower_components/font-awesome/css/font-awesome.min.css')!!}
+
+    <link href='https://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

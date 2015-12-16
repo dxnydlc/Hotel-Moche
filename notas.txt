@@ -31,3 +31,9 @@ php artisan make:request StoreBlogPostRequest
 
 -- insert el admin (clave: 1234)
 INSERT INTO `users` VALUES (1,'Dxny','De la Cruz','42968274','dany@delacruz.pe','admin','$2y$10$WIhNGOCvWqFIjSZCOlkJRuPA45WjBMJ/LegatjDMQud7KbMknV2n6','GWeKFxuU2J5mdPWv7rA0EO58zWUB806NPGNOi98nrRc9LSuo6y0LOFWbpgX6','2015-10-09 22:21:58','2015-10-10 18:19:36',NULL)
+
+
+-- Template blade en laravel
+https://laravelcollective.com/docs/5.1/html#text
+-- Tunear text-area
+http://laravel-recipes.com/recipes/162/creating-a-textarea-input-field
