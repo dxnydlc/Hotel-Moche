@@ -10,6 +10,11 @@
         
         {!!Form::open(['route'=>'registro.store','method'=>'POST','autocomplete'=>'off'])!!}
 
+          {!! Form::hidden('idUsuario','0',['id'=>'idUsuario']) !!}
+          {!! Form::hidden('idHabitacion','0',['id'=>'idHabitacion']) !!}
+          {!! Form::hidden('idEmpresa','0',['id'=>'idEmpresa']) !!}
+          {!! Form::hidden('idReserva','0',['id'=>'idReserva']) !!}
+
           @include('registro.forms.newPersona')
 
         {!!Form::close()!!}

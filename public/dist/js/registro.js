@@ -26,12 +26,15 @@ var _servicio = 'http://localhost:8000/';
 			/* ----------------------------------------------------------- */
 			$('#dni').keyup(function(event){
 				var _dni = $(this).val();
+				$('#idUsuario').val('0');
 				if( _dni.length == 8 ){
 					$.get( _servicio+'getUser/'+_dni , function(resp){
 						if(resp != null || resp != undefined )
 						{
 							$('#nombre').val( resp[0].nombre );
 							$('#apellidos').val( resp[0].apellidos );
+							$('#idUsuario').val(resp[0].id);
+							console.log(resp[0].id);
 						}
 					},'json')
 				}
