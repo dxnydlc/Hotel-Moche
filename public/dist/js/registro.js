@@ -34,7 +34,6 @@ var _servicio = 'http://localhost:8000/';
 							$('#nombre').val( resp[0].nombre );
 							$('#apellidos').val( resp[0].apellidos );
 							$('#idUsuario').val(resp[0].id);
-							console.log(resp[0].id);
 						}
 					},'json')
 				}

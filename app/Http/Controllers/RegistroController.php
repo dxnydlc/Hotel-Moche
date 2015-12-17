@@ -70,7 +70,7 @@ class RegistroController extends Controller
      */
     public function show($id)
     {
-        //
+        //Para ver los datos guardados
     }
 
     /**
@@ -81,7 +81,7 @@ class RegistroController extends Controller
      */
     public function edit($id)
     {
-        //
+        //Editar el registro de la habitación
     }
 
     /**
