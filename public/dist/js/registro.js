@@ -38,6 +38,22 @@ var _servicio = 'http://localhost:8000/';
 					},'json')
 				}
 			});
+			/* ----------------------------------------------------------- */
+			$('#inicio_servicio').datetimepicker();
+			/* ----------------------------------------------------------- */
+			$('#fin_servicio').datetimepicker({
+			    useCurrent: false //Important! See issue #1075
+			});
+			/* ----------------------------------------------------------- */
+			$("#inicio_servicio").on("dp.change", function (e) {
+			    $('#fin_servicio').data("DateTimePicker").minDate(e.date);
+			});
+			/* ----------------------------------------------------------- */
+			$("#fin_servicio").on("dp.change", function (e) {
+			    $('#inicio_servicio').data("DateTimePicker").maxDate(e.date);
+			});
+			/* ----------------------------------------------------------- */
+			/* ----------------------------------------------------------- */
 		}
 	);
 

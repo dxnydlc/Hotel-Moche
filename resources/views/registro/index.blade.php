@@ -1,5 +1,12 @@
 @extends('layouts.admin')
 
+
+@section('losCSS')
+    <!-- Datepicker -->
+    {!!Html::style('bower_components/datetimepicker/bootstrap-datetimepicker.min.css')!!}
+
+@endsection
+
 @section('content')
 <div class="row">
     <div class="col-lg-12">
@@ -66,9 +73,16 @@ $clase = ''; $btn_text = ''; $icos = '';
 </div>
 <!-- /.row -->
 
+
+
  @include('registro.forms.persona')
 
 @section('scripts')
+    <!-- Datepicker -->
+    {!!Html::script('bower_components/datetimepicker/moment.min.js')!!}
+    {!!Html::script('bower_components/datetimepicker/es.js')!!}
+    {!!Html::script('bower_components/datetimepicker/bootstrap-datetimepicker.min.js')!!}
+
     <!-- JS de registro -->
     {!!Html::script('dist/js/registro.js')!!}
 @endsection

@@ -20,6 +20,30 @@
 <!-- /row -->
 
 <div class="row">
+	<div class=' col-lg-6 col-md-6 col-sm-6 col-xs-12 '>
+        <div class="form-group">
+            <div class='input-group date' id='inicio_servicio'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class=' col-lg-6 col-md-6 col-sm-6 col-xs-12 '>
+        <div class="form-group">
+            <div class='input-group date' id='fin_servicio'>
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /row -->
+
+<div class="row">
 	<div class="form-group col-lg-2">
 		{!!Form::label('precio','Precio:')!!}
 		{!!Form::text('apellidos',null,['class'=>'form-control'])!!}
