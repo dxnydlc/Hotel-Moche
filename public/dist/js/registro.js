@@ -6,6 +6,9 @@ var _servicio = 'http://localhost:8000/';
 			/* ----------------------------------------------------------- */
 			$(document).delegate('.deaprimary','click',function(event){
 				var _nHabit = $(this).attr('rel');
+				var _idHabit= $(this).attr('alt');
+				//
+				$('#idHabitacion').val(_idHabit);
 				$('#nHabit').html(_nHabit);
 				$('#modalPersona').modal('show');
 				limpiarCajas();
@@ -27,9 +30,9 @@ var _servicio = 'http://localhost:8000/';
 			$('#dni').keyup(function(event){
 				var _dni = $(this).val();
 				$('#idUsuario').val('0');
-				if( _dni.length == 8 ){
+				if( _dni.length >= 8 ){
 					$.get( _servicio+'getUser/'+_dni , function(resp){
-						if(resp != null || resp != undefined )
+						if(resp[0] != null || resp[0] != undefined )
 						{
 							$('#nombre').val( resp[0].nombre );
 							$('#apellidos').val( resp[0].apellidos );
@@ -54,9 +57,10 @@ var _servicio = 'http://localhost:8000/';
 			});
 			/* ----------------------------------------------------------- */
 			$('#btnRegistrar').click(function(event) {
-				$.post( _servicio+'/registro' , {param1: 'value1'}, function(data, textStatus, xhr) {
-					/*optional stuff to do after success */
-				});
+				var _Data = $('#frmDatos').serialize();
+				$.post( _servicio+'registro' , _Data , function(data, textStatus, xhr) {
+					console.log(data);
+				},'json');
 			});
 			/* ----------------------------------------------------------- */
 		}

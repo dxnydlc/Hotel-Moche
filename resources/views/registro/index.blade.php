@@ -54,7 +54,7 @@ $clase = ''; $btn_text = ''; $icos = '';
                                     <span class="ttb_Bold" >{{$habita->numero}}</span><br/>
                                     {{$habita->piso}}<br/>
                                     {{$habita->estado}}</p>
-                                    <p class="text-center ttb_Bold " ><a class="text-{{$clase}} dea{{$clase}}" href="#" rel="{{$habita->numero.' - '.$habita->piso.', '.$habita->tipo}}" >{{$btn_text}} <span class="glyphicon {{$icos}}" ></span></a></p>
+                                    <p class="text-center ttb_Bold " ><a alt="{{ $habita->idHabitacion }}" class="text-{{$clase}} dea{{$clase}}" href="#" rel="{{$habita->numero.' - '.$habita->piso.', '.$habita->tipo}}" >{{$btn_text}} <span class="glyphicon {{$icos}}" ></span></a></p>
                                 </div>
                             </div>
                         </div>

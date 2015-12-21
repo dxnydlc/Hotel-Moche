@@ -60,12 +60,32 @@ class RegistroController extends Controller
         /*User::create( $request->all() );
         Session::flash('message','Usuario creado correctamente');
         return redirect::to('/registro');*/
+        $mail_fake = '';
+        $mail_fake = rand(0,9999).'_'.$request['dni'].'@mail.com';
+        $fechaInicio = '';
+        $fechaFin = '';
+        #
+        $fecha_hora_inicio = $request['inicio_servicio'];
+        $fecha_hora_fin = $request['fin_servicio'];
+        #
+        $user = User::create([
+            'nombre'    => $request['nombre'],
+            'apellidos' => $request['apellidos'],
+            'dni'       => $request['dni'],
+            'email'     => $mail_fake,
+            'password'  => '',
+            'tipo'      => 'normal'
+        ]);
+        $idUsuario = 0;
+        $idUsuario = $user->id;
+
         if( $request->ajax() )
         {
             return response()->json([
-                "mensaje" => $request->all()
+                "mensaje" => 'id de usuario: '.$idUsuario
             ]);
         }
+        #"mensaje" => $request->all()
     }
 
     /**

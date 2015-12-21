@@ -10,7 +10,7 @@
       <!-- /modal-header -->
 
       <div class="modal-body">
-        {!!Form::open(['route'=>'registro.store','method'=>'POST','autocomplete'=>'off'])!!}
+        {!!Form::open(['route'=>'registro.store','method'=>'POST','autocomplete'=>'off','id'=>'frmDatos'])!!}
 
           {!! Form::hidden('idUsuario','0',['id'=>'idUsuario']) !!}
           {!! Form::hidden('idHabitacion','0',['id'=>'idHabitacion']) !!}

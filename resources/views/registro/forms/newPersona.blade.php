@@ -34,8 +34,8 @@
     <div class=' col-lg-6 col-md-6 col-sm-6 col-xs-12 '>
         <div class="form-group">
         {!!Form::label('fin_servicio','Fin:')!!}
-            <div class='input-group date' id='fin_servicio' name='fin_servicio' >
-                <input type='text' class="form-control" />
+            <div class='input-group date'  >
+                <input type='text' class="form-control" id='fin_servicio' name='fin_servicio' />
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </span>
@@ -48,12 +48,12 @@
 <div class="row">
 	<div class="form-group col-lg-2">
 		{!!Form::label('precio','Precio:')!!}
-		{!!Form::text('apellidos',null,['class'=>'form-control'])!!}
+		{!!Form::text('precio',null,['class'=>'form-control'])!!}
 		<p class="help-block">Día/noche.</p>
 	</div>
 	<div class="form-group col-lg-5">
-		{!!Form::label('precio','Observaciones:')!!}
-		{!!Form::textarea('apellidos',null,['class'=>'form-control','size'=>'1x1'])!!}
+		{!!Form::label('obs','Observaciones:')!!}
+		{!!Form::textarea('obs',null,['class'=>'form-control','size'=>'1x1'])!!}
 		<p class="help-block">Precio de habitación por día.</p>
 	</div>
 </div>
