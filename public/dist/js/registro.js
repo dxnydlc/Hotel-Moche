@@ -53,6 +53,11 @@ var _servicio = 'http://localhost:8000/';
 			    $('#inicio_servicio').data("DateTimePicker").maxDate(e.date);
 			});
 			/* ----------------------------------------------------------- */
+			$('#btnRegistrar').click(function(event) {
+				$.post( _servicio+'/registro' , {param1: 'value1'}, function(data, textStatus, xhr) {
+					/*optional stuff to do after success */
+				});
+			});
 			/* ----------------------------------------------------------- */
 		}
 	);

@@ -57,9 +57,15 @@ class RegistroController extends Controller
      */
     public function store(Request $request)
     {
-        User::create( $request->all() );
+        /*User::create( $request->all() );
         Session::flash('message','Usuario creado correctamente');
-        return redirect::to('/registro');
+        return redirect::to('/registro');*/
+        if( $request->ajax() )
+        {
+            return response()->json([
+                "mensaje" => $request->all()
+            ]);
+        }
     }
 
     /**

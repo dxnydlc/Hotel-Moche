@@ -22,8 +22,9 @@
 <div class="row">
 	<div class=' col-lg-6 col-md-6 col-sm-6 col-xs-12 '>
         <div class="form-group">
-            <div class='input-group date' id='inicio_servicio'>
-                <input type='text' class="form-control" />
+        	{!!Form::label('inicio_servicio','Inicio:')!!}
+            <div class='input-group date' >
+                <input type='text' class="form-control" id='inicio_servicio' name='inicio_servicio' />
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </span>
@@ -32,7 +33,8 @@
     </div>
     <div class=' col-lg-6 col-md-6 col-sm-6 col-xs-12 '>
         <div class="form-group">
-            <div class='input-group date' id='fin_servicio'>
+        {!!Form::label('fin_servicio','Fin:')!!}
+            <div class='input-group date' id='fin_servicio' name='fin_servicio' >
                 <input type='text' class="form-control" />
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
