@@ -4,6 +4,74 @@ var _servicio = 'http://localhost:8000/';
 	$(document).ready(function()
 		{
 			/* ----------------------------------------------------------- */
+			$('#frmDatos').validate({
+			    rules: {
+			        dni: {
+			            minlength: 6,
+			            maxlength: 15,
+			            required: true
+			        },
+			        nombre: {
+			            minlength: 3,
+			            maxlength: 50,
+			            required: true
+			        },
+			        apellidos: {
+			            minlength: 3,
+			            maxlength: 50,
+			            required: true
+			        },
+			        inicio_servicio: {
+			            required: true
+			        },
+			        fin_servicio: {
+			            required: true
+			        },
+			        precio: {
+			            minlength: 3,
+			            required: true
+			        }
+			    },
+			    messages :{
+			    	dni :{
+			    		required : 'DNI requerido'
+			    	},
+			    	nombre :{
+			    		required : 'Nombre requerido'
+			    	},
+			    	apellidos :{
+			    		required : 'Apellidos requerido'
+			    	},
+			    	inicio_servicio :{
+			    		required : 'Requerido'
+			    	},
+			    	fin_servicio :{
+			    		required : 'Requerido'
+			    	}
+			    },
+			    highlight: function(element) {
+			        $(element).closest('.form-group').addClass('has-error');
+			    },
+			    unhighlight: function(element) {
+			        $(element).closest('.form-group').removeClass('has-error');
+			    },
+			    errorElement: 'span',
+			    errorClass: 'help-block',
+			    errorPlacement: function(error, element) {
+			        if(element.parent('.input-group').length) {
+			            error.insertAfter(element.parent());
+			        } else {
+			            error.insertAfter(element);
+			        }
+			    },
+			    submitHandler: function(form) {
+					var _Data = $('#frmDatos').serialize();
+					$.post( _servicio+'registro' , _Data , function(data, textStatus, xhr) {
+						console.log(data);
+					},'json');
+				}
+			});
+			/* ----------------------------------------------------------- */
 			$(document).delegate('.deaprimary','click',function(event){
 				var _nHabit = $(this).attr('rel');
 				var _idHabit= $(this).attr('alt');
@@ -56,12 +124,6 @@ var _servicio = 'http://localhost:8000/';
 			    $('#inicio_servicio').data("DateTimePicker").maxDate(e.date);
 			});
 			/* ----------------------------------------------------------- */
-			$('#btnRegistrar').click(function(event) {
-				var _Data = $('#frmDatos').serialize();
-				$.post( _servicio+'registro' , _Data , function(data, textStatus, xhr) {
-					console.log(data);
-				},'json');
-			});
 			/* ----------------------------------------------------------- */
 		}
 	);

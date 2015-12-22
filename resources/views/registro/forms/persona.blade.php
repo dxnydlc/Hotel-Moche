@@ -9,9 +9,8 @@
       </div>
       <!-- /modal-header -->
 
+{!!Form::open(['route'=>'registro.store','method'=>'POST','autocomplete'=>'off','id'=>'frmDatos'])!!}
       <div class="modal-body">
-        {!!Form::open(['route'=>'registro.store','method'=>'POST','autocomplete'=>'off','id'=>'frmDatos'])!!}
-
           {!! Form::hidden('idUsuario','0',['id'=>'idUsuario']) !!}
           {!! Form::hidden('idHabitacion','0',['id'=>'idHabitacion']) !!}
           {!! Form::hidden('idEmpresa','0',['id'=>'idEmpresa']) !!}
@@ -19,15 +18,16 @@
 
           @include('registro.forms.newPersona')
 
-        {!!Form::close()!!}
       </div>
       <!-- /modal-body -->
 
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        <button id="btnRegistrar" type="button" class="btn btn-primary">Registrar</button>
+        <input type="submit" class="btn btn-primary" value="Registrar">
+        <!--<button id="btnRegistrarAAAAAAAAAAAAAA" type="submit" class="btn btn-primary">Registrar</button>-->
       </div>
       <!-- /modal-footer -->
+{!!Form::close()!!}
 
     </div>
   </div>

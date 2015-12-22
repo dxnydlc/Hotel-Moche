@@ -82,6 +82,7 @@ $clase = ''; $btn_text = ''; $icos = '';
     {!!Html::script('bower_components/datetimepicker/moment.min.js')!!}
     {!!Html::script('bower_components/datetimepicker/es.js')!!}
     {!!Html::script('bower_components/datetimepicker/bootstrap-datetimepicker.min.js')!!}
+    {!!Html::script('bower_components/validate/jquery.validate.min.js')!!}
 
     <!-- JS de registro -->
     {!!Html::script('dist/js/registro.js')!!}

@@ -62,11 +62,19 @@ class RegistroController extends Controller
         return redirect::to('/registro');*/
         $mail_fake = '';
         $mail_fake = rand(0,9999).'_'.$request['dni'].'@mail.com';
-        $fechaInicio = '';
-        $fechaFin = '';
+        $fechaInicio        = '';
+        $fechaFin           = '';
+        $fecha_hora_inicio  = array();
+        $fecha_hora_fin     = array();
         #
-        $fecha_hora_inicio = $request['inicio_servicio'];
-        $fecha_hora_fin = $request['fin_servicio'];
+        $fecha_hora_inicio  = $request['inicio_servicio'];
+        $fecha_hora_fin     = $request['fin_servicio'];
+        #
+        list($dia,$mes,$anio)   = explode($fecha_hora_inicio[0], "/");
+        $fecha_hora_inicio      = $anio.'-'.$mes.'-'.$dia.' '.$fecha_hora_inicio[1];
+        #
+        list($dia,$mes,$anio)   = explode($fecha_hora_fin[0], "/");
+        $fecha_hora_fin         = $anio.'-'.$mes.'-'.$dia.' '.$fecha_hora_fin[1];
         #
         $user = User::create([
             'nombre'    => $request['nombre'],
