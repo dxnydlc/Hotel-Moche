@@ -59,6 +59,8 @@
     <!-- Custom Theme JavaScript -->
     {!!Html::script('dist/js/sb-admin-2.js')!!}
 
+    
+
 </body>
 
 </html>

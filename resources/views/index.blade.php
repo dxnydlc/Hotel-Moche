@@ -10,7 +10,7 @@
 
         <h1 class="page-header">Hotel Moche - Login</h1>
 
-        {!!Form::open(['route'=>'login.store','method'=>'POST','autocomplete'=>'off'])!!}
+        {!!Form::open(['route'=>'login.store','method'=>'POST','autocomplete'=>'off','id'=>'frmLogin'])!!}
 
         	<div class="form-group">
 				{!!Form::label('email','Correo (*):')!!}
@@ -26,7 +26,7 @@
 
         	<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-				  <button type="submit" class="btn btn-default">Ingresar</button>
+				  <button id="loginGO" type="submit" class="btn btn-default">Ingresar</button>
 				</div>
 			</div>
 
@@ -39,4 +39,6 @@
     </div>
     <!-- /.col-lg-12 -->
 </div>
+
 @stop
+

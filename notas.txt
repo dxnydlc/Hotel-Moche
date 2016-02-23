@@ -40,3 +40,6 @@ http://laravel-recipes.com/recipes/162/creating-a-textarea-input-field
 
 CARGAR PROYECTO
 composer install
+
+GENERAR KEY
+php artisan key:generate
