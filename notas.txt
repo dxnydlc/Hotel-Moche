@@ -37,3 +37,6 @@ INSERT INTO `users` VALUES (1,'Dxny','De la Cruz','42968274','dany@delacruz.pe',
 https://laravelcollective.com/docs/5.1/html#text
 -- Tunear text-area
 http://laravel-recipes.com/recipes/162/creating-a-textarea-input-field
+
+CARGAR PROYECTO
+composer install
