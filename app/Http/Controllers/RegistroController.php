@@ -67,6 +67,10 @@ class RegistroController extends Controller
         $fecha_hora_inicio  = array();
         $fecha_hora_fin     = array();
         #
+        $hora_inicio        = array();
+        $hora_fin           = array();
+        #
+        #
         $fecha_hora_inicio  = $request['inicio_servicio'];
         $fecha_hora_fin     = $request['fin_servicio'];
         #

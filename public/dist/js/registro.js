@@ -28,7 +28,7 @@ var _servicio = 'http://localhost:8000/';
 			            required: true
 			        },
 			        precio: {
-			            minlength: 3,
+			            minlength: 2,
 			            required: true
 			        }
 			    },

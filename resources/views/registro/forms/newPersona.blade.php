@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="form-group col-lg-4">
 		{!!Form::label('dni','DNI (*):')!!}
-		{!!Form::text('dni',null,['class'=>'form-control'])!!}
+		{!!Form::text('dni',null,['class'=>'form-control','maxlength'=>8])!!}
 		<p class="help-block">Escriba el número para cargar los datos del Huesped</p>
 	</div>
 
