@@ -20,7 +20,7 @@ class Kernel extends HttpKernel
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         \hotelMoche\Http\Middleware\VerifyCsrfToken::class,
     ];
-
+    
     /**
      * The application's route middleware.
      *

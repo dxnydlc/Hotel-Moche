@@ -25,7 +25,7 @@ class UserUpdateRequest extends Request
     {
         return [
             'nombre'    => 'required' ,
-            'dni'       => 'required|unique:users' ,
+            'dni'       => 'required' ,
             'apellidos' => 'required'
         ];
     }
